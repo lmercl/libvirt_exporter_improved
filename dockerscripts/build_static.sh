@@ -1,5 +1,5 @@
 #!/bin/sh
-libxml2_ver=2.9.8
+libxml2_ver=2.9.9
 libvirt_ver=3.8.0
 apk add --update git gcc g++ make libc-dev portablexdr-dev linux-headers libnl-dev perl libtirpc-dev pkgconfig wget python2 python2-dev libxslt
 wget ftp://xmlsoft.org/libxml2/libxml2-${libxml2_ver}.tar.gz -P /tmp && \

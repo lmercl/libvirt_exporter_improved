@@ -29,7 +29,7 @@ import (
 	"github.com/libvirt/libvirt-go"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/rumanzo/libvirt_exporter_improved/libvirt_schema"
+	"github.com/bykvaadm/libvirt_exporter_improved/libvirt_schema"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
