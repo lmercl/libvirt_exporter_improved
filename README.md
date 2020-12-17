@@ -3,6 +3,12 @@ Project forked from https://github.com/kumina/libvirt_exporter and substantially
 Implemented support for several additional metrics, ceph rbd (and network block devices), ovs.
 Implemented statistics collection using GetAllDomainStats
 
+# Running exporter
+
+docker run -ti -p 9177:9177 -v /run/libvirt/libvirt-sock-ro:/var/run/libvirt/libvirt-sock-ro:ro bykva/libvirt-exporter:1.0
+
+# other info
+
 This repository provides code for a Prometheus metrics exporter
 for [libvirt](https://libvirt.org/). This exporter connects to any
 libvirt daemon and exports per-domain metrics related to CPU, memory,
