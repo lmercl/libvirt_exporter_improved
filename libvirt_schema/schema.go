@@ -15,6 +15,27 @@ package libvirt_schema
 
 type Domain struct {
 	Devices Devices `xml:"devices"`
+	Metadata Metadata `xml:"metadata"`
+        UUID     string   `xml:"uuid"`
+}
+
+type Metadata struct {
+        // The actual xml tag is nova:instance, but we don't care about the namespaces
+        NovaInstance NovaInstance `xml:"instance"`
+}
+
+type NovaInstance struct {
+        Name   string     `xml:"name"`
+        Flavor NovaFlavor `xml:"flavor"`
+        Owner  NovaOwner  `xml:"owner"`
+}
+
+type NovaFlavor struct {
+        Name string `xml:"name,attr"`
+}
+
+type NovaOwner struct {
+        ProjectName string `xml:"project"`
 }
 
 type Devices struct {
@@ -42,6 +63,13 @@ type Interface struct {
 	Source      InterfaceSource      `xml:"source"`
 	Target      InterfaceTarget      `xml:"target"`
 	Virtualport InterfaceVirtualPort `xml:"virtualport"`
+	Mac DomainInterfaceMAC `xml:"mac"`
+}
+
+type DomainInterfaceMAC struct {
+    Address string `xml:"address,attr"`
+    Type    string `xml:"type,attr,omitempty"`
+    Check   string `xml:"check,attr,omitempty"`
 }
 
 type InterfaceVirtualPort struct {
