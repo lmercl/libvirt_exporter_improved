@@ -1,4 +1,4 @@
-module github.com/bykvaadm/libvirt_exporter_improved
+module github.com/lmercl/libvirt_exporter_improved
 
 go 1.14
 
