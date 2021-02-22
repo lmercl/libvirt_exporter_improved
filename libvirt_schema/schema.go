@@ -46,8 +46,9 @@ type Devices struct {
 type Disk struct {
 	Device   string     `xml:"device,attr"`
 	Source   DiskSource `xml:"source"`
-	Target   DiskTarget `xml:"target"`
+	Target	 DiskTarget `xml:"target"`
 	DiskType string     `xml:"type,attr"`
+        Serial	 string     `xml:"serial"`
 }
 
 type DiskSource struct {
